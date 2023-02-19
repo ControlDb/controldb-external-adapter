@@ -143,3 +143,16 @@ If using a REST API Gateway, you will need to disable the Lambda proxy integrati
 - Select the deployment stage and security
 - Click Add
 
+
+## Setting up the adapter
+1. Configure the external adapter with the required parameters to fetch the data you need. This may include specifying the API endpoint, any required authentication, and the format of the data.
+
+2. Deploy the external adapter to a publicly accessible location, such as a web server or cloud service. You can use Chainlink's external adapter CLI tool to simplify this process.
+
+3. Create a Chainlink node and configure it to use the external adapter you just deployed. This involves defining the job that will use the adapter, specifying the input parameters, and linking the output to your smart contract.
+
+4. Deploy your smart contract to the blockchain, and define the interface that will be used to interact with the Chainlink node.
+
+5. Once everything is set up, you can trigger the smart contract to request the off-chain data, which will be fetched by the Chainlink node and passed back to the smart contract. The smart contract can then use the data to execute its logic.
+
+
